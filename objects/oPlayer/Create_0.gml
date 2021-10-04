@@ -1,5 +1,6 @@
 vsp = 0;
-walksp = 4;
+hsp = 0;
+walksp = 2;
 grv = 0.3;
-mom = 0.2
+mom = 1
 dash_sp = 5;

@@ -9,7 +9,17 @@ key_dash = keyboard_check_pressed(vk_up);
 
 var move = key_right - key_left;
 
-hsp = move * walksp;
+hsp += move * walksp; //+= allows to slide bc does not strictly set variable
+
+//momentum calculation below
+
+if (hsp > 0) {
+	hsp = (hsp - mom);
+} else if (hsp < 0) {
+	hsp = (hsp + mom);
+} else {
+	hsp = 0;
+};
 
 
 vsp = vsp + grv;
