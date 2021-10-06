@@ -9,16 +9,72 @@ key_dash = keyboard_check_pressed(vk_up);
 
 var move = key_right - key_left;
 
+
 hsp += move * walksp; //+= allows to slide bc does not strictly set variable
 
 //momentum calculation below
 
+// dash
+
+var dash = function () {
+		var move = key_right - key_left;
+		if (key_dash) {
+			dashable = true;
+			//show_debug_message(move);
+			start_timer = true;
+			if (start_timer == true) {timer = room_speed * 2}
+
+			if (timer > 0) {hsp += (move * dash_sp); timer--;}
+
+			if (timer == 0)
+			{
+			 dashable = false;
+			 timer = -1; 
+			 start_timer = false;
+			}
+			return dashable
+		} else {
+
+	dashable = false;
+	return dashable
+	};
+
+}
+
+var dashable = dash();
+show_debug_message(dash());
+//show_debug_message(dash());
+/*if (key_dash) {
+	var dashable = true;
+	hsp += (move * dash_sp);
+	show_debug_message(move);
+	var i = 0;
+	while (dashable = true) 
+	{
+		if (i > 10) {
+			
+			dashable = false;
+			break;
+			};
+		i++;
+		
+	};
+	return dashable
+};*/
+//show_debug_message(dashable);
+//show_debug_message(hsp);
 if (hsp > 0) {
 	hsp = (hsp - mom);
 } else if (hsp < 0) {
 	hsp = (hsp + mom);
 } else {
 	hsp = 0;
+};
+
+if (hsp >= 5 && dashable = false) {
+	hsp = 5
+} else if (hsp <= -5 && dashable = false) {
+	hsp = -5
 };
 
 
