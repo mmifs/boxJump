@@ -8,7 +8,7 @@ key_dash = keyboard_check_pressed(vk_up);
 //Calculate Movement
 var move = key_right - key_left;
 hsp += move * walksp;
-show_debug_message(walksp);
+show_debug_message(hsp);
 
 //Dash Movement
 if (key_dash) {
@@ -27,12 +27,21 @@ if (hsp > 0) {
 };
 
 //Speed limit
-if (hsp > 3) {
+if (hsp > 4) {
 	walksp = 0;
+	dash_sp = 0;
+} else if (hsp < -4) {
+	walksp = 0;
+	dash_sp = 0;
 } else if (hsp < -3) {
 	walksp = 0;
+	dash_sp = 10;
+} else if (hsp > 3) {
+	walksp = 0;
+	dash_sp = 10;
 } else {
 	walksp = 1;
+	dash_sp = 10;
 };
 
 //Gravity Calc
