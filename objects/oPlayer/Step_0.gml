@@ -4,18 +4,15 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
 key_dash = keyboard_check_pressed(vk_up);
 
-
 //Calculate Movement
 var move = key_right - key_left;
-hsp += move * walksp;
-show_debug_message(hsp);
 
 //Dash Movement
 if (key_dash) {
 	hsp += move * dash_sp;
 	key_left = 0;
 	key_right = 0;
-};
+}
 
 //Momentum Calculation
 if (hsp > 0) {
@@ -24,34 +21,33 @@ if (hsp > 0) {
 	hsp += mom;
 } else {
 	hsp = 0;
-};
+}
 
 //Speed limit
-if (hsp > 4) {
-	walksp = 0;
-	dash_sp = 0;
-} else if (hsp < -4) {
-	walksp = 0;
-	dash_sp = 0;
-} else if (hsp < -3) {
-	walksp = 0;
-	dash_sp = 10;
-} else if (hsp > 3) {
-	walksp = 0;
-	dash_sp = 10;
-} else {
-	walksp = 1;
-	dash_sp = 10;
-};
+walksp = 1*(hsp >= -3 && hsp <= 3);
+dash_sp = 10*(hsp >= -4 && hsp <= 4); 
+hsp += move * walksp;
 
 //Gravity Calc
 vsp = vsp + grv;
 
-//If touching ground & jump pressed
+//Jump Logic
+if (place_meeting(x,y+1,oWall)) {
+	jump_count = 0;
+}
+
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
-	vsp = -10;
-};
+	vsp += jump_height;
+}
+
+if ((!place_meeting(x,y+1,oWall)) && (key_jump)) {
+	if (jump_count = 0) {
+		vsp = 0;
+		vsp += jump_height;	
+		jump_count ++;
+	}
+}
 
 // Horizontal Collision
 if (place_meeting(x+hsp,y,oWall)) 
@@ -61,8 +57,7 @@ if (place_meeting(x+hsp,y,oWall))
 		x = x + sign(hsp);
 	}
 	hsp = 0;
-};
-
+}
 x = x + hsp;
 
 // Vertical Collision
