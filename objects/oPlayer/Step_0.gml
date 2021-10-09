@@ -70,3 +70,17 @@ if (place_meeting(x,y+vsp,oWall))
 	vsp = 0;
 }
 y = y + vsp;
+
+// Destroy self on enemy contact
+if (place_meeting(x+hsp,y,oEnemy1)) 
+{
+	while (!place_meeting(x+sign(hsp),y,oEnemy1))
+	{
+		x = x + sign(hsp);
+	}
+	instance_destroy();
+}
+
+if(move != 0) {
+	faceDirection = move;
+}

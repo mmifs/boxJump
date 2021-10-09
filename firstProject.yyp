@@ -1,10 +1,16 @@
 {
   "resources": [
+    {"id":{"name":"oEnemy1","path":"objects/oEnemy1/oEnemy1.yy",},"order":3,},
+    {"id":{"name":"oBang","path":"objects/oBang/oBang.yy",},"order":5,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":1,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":1,},
+    {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"order":4,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"controllerObject","path":"objects/controllerObject/controllerObject.yy",},"order":2,},
+    {"id":{"name":"sBang","path":"sprites/sBang/sBang.yy",},"order":4,},
+    {"id":{"name":"sEnemy1","path":"sprites/sEnemy1/sEnemy1.yy",},"order":2,},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":0,},
+    {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
