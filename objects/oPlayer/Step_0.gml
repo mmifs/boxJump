@@ -9,7 +9,7 @@ var move = key_right - key_left;
 
 //Dash Movement
 if (key_dash) {
-	hsp += move * dash_sp;
+	hsp += move * dash;
 	key_left = 0;
 	key_right = 0;
 }
@@ -24,9 +24,9 @@ if (hsp > 0) {
 }
 
 //Speed limit
-walksp = 1*(hsp >= -3 && hsp <= 3);
-dash_sp = 10*(hsp >= -4 && hsp <= 4); 
-hsp += move * walksp;
+walk = walk_sp*(hsp >= -3 && hsp <= 3);
+dash = dash_sp*(hsp >= -4 && hsp <= 4); 
+hsp += move * walk;
 
 //Gravity Calc
 vsp = vsp + grv;
@@ -41,7 +41,7 @@ if (place_meeting(x,y+1,oWall)) && (key_jump)
 	vsp += jump_height;
 }
 
-if ((!place_meeting(x,y+1,oWall)) && (key_jump)) {
+if (!place_meeting(x,y+1,oWall)) && (key_jump) {
 	if (jump_count = 0) {
 		vsp = 0;
 		vsp += jump_height;	
