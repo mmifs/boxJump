@@ -6,7 +6,16 @@ key_dash = keyboard_check_pressed(vk_up);
 
 //Calculate Movement
 var move = key_right - key_left;
-
+if (move<0){
+	
+	image_index = 1;
+}
+	
+if(move>0){
+		
+	image_index = 2;
+}
+	
 //Dash Movement
 if (key_dash) {
 	hsp += move * dash;
