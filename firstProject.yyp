@@ -11,6 +11,7 @@
     {"id":{"name":"sEnemy1","path":"sprites/sEnemy1/sEnemy1.yy",},"order":2,},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":0,},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":3,},
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
