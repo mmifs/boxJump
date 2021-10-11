@@ -8,12 +8,25 @@ key_dash = keyboard_check_pressed(vk_up);
 var move = key_right - key_left;
 if (move<0){
 	
-	image_index = 1;
+	//image_index = 1;
+	sprite_index = sPlayerRunL;
 }
 	
 if(move>0){
 		
-	image_index = 2;
+	//image_index = 2;
+	sprite_index = sPlayerRunR;
+}
+
+if(move=0){
+	if(faceDirection<0){
+		sprite_index=sPlayerIdle
+		image_index=1;
+	}
+	if(faceDirection>0){
+		sprite_index=sPlayerIdle
+		image_index=2;
+	}
 }
 	
 //Dash Movement
