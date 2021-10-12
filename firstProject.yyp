@@ -1,8 +1,13 @@
 {
   "resources": [
+    {"id":{"name":"sFloorLand","path":"sounds/sFloorLand/sFloorLand.yy",},"order":4,},
     {"id":{"name":"oEnemy1","path":"objects/oEnemy1/oEnemy1.yy",},"order":3,},
     {"id":{"name":"oBang","path":"objects/oBang/oBang.yy",},"order":5,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":1,},
+    {"id":{"name":"oMusic","path":"objects/oMusic/oMusic.yy",},"order":6,},
+    {"id":{"name":"sDash","path":"sounds/sDash/sDash.yy",},"order":3,},
+    {"id":{"name":"sFloorJump","path":"sounds/sFloorJump/sFloorJump.yy",},"order":1,},
+    {"id":{"name":"sDoubleJump","path":"sounds/sDoubleJump/sDoubleJump.yy",},"order":2,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":1,},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"order":4,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
@@ -13,6 +18,7 @@
     {"id":{"name":"sPlayerRunL","path":"sprites/sPlayerRunL/sPlayerRunL.yy",},"order":5,},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},"order":0,},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":3,},
+    {"id":{"name":"sMusic1","path":"sounds/sMusic1/sMusic1.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],

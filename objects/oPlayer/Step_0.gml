@@ -31,6 +31,9 @@ if(move=0){
 	
 //Dash Movement
 if (key_dash) {
+	if (hsp >= -4 && hsp <= 4 && move != 0) {
+		audio_play_sound(sDash,1000,false)
+	}
 	hsp += move * dash;
 	key_left = 0;
 	key_right = 0;
@@ -55,20 +58,30 @@ vsp = vsp + grv;
 
 //Jump Logic
 if (place_meeting(x,y+1,oWall)) {
+	if (inAir = 1) {
+	audio_play_sound(sFloorLand,1000,false)
+	}
 	jump_count = 0;
+	inAir = 0;	
 }
 
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
+	audio_play_sound(sFloorJump,1000,false)
 	vsp += jump_height;
 }
 
 if (!place_meeting(x,y+1,oWall)) && (key_jump) {
 	if (jump_count = 0) {
 		vsp = 0;
+		audio_play_sound(sDoubleJump,1000,false)
 		vsp += jump_height;	
 		jump_count ++;
 	}
+}
+
+if (!place_meeting(x,y+1,oWall)) {
+	inAir = 1;
 }
 
 // Horizontal Collision
