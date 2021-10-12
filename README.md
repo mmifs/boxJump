@@ -1,3 +1,46 @@
-# gameMaker-test
+# BoxJump (WIP) 
 
-we making vidya
+## Description
+
+BoxJump is a 2 dimensional platformer video game currently under development.
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+
+## Installation
+
+N/A
+
+
+## Usage
+
+N/A
+
+
+## License
+
+license error
+
+
+## Contributing
+
+N/A
+
+
+## Tests
+
+
+
+
+## Questions
+
+Github: https://github.com/mmifs
+
+Please forward any additional questions to my email: TBA

@@ -4,17 +4,23 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
 key_dash = keyboard_check_pressed(vk_up);
 
+//Functions
+function respawn() {
+	instance_create_layer(oRoomCon.xPlayerOrigin,oRoomCon.yPlayerOrigin,Room1,oPlayer);
+}
+function killPlayer() {
+	audio_play_sound(sDeath,1000,false)
+	instance_destroy(oPlayer)
+	respawn();
+}
+
 //Calculate Movement
 var move = key_right - key_left;
 if (move<0){
-	
-	//image_index = 1;
 	sprite_index = sPlayerRunL;
 }
 	
 if(move>0){
-		
-	//image_index = 2;
 	sprite_index = sPlayerRunR;
 }
 
@@ -113,8 +119,20 @@ if (place_meeting(x+hsp,y,oEnemy1))
 	{
 		x = x + sign(hsp);
 	}
-	instance_destroy();
+	killPlayer();
 }
+
+
+//Map border instakill
+if ((instance_exists(oPlayer)) && (
+oPlayer.x < oRoomCon.leftBorder || 
+oPlayer.x > oRoomCon.rightBorder || 
+oPlayer.y > oRoomCon.bottomBorder || 
+oPlayer.y < oRoomCon.topBorder)) 
+{
+	killPlayer();
+}
+
 
 if(move != 0) {
 	faceDirection = move;
