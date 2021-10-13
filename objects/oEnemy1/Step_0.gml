@@ -1,1 +1,1 @@
-show_debug_message(hp);
+//show_debug_message(hp);

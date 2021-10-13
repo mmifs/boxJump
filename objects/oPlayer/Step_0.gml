@@ -17,12 +17,27 @@ function killPlayer() {
 //Calculate Movement
 var move = key_right - key_left;
 if (move<0){
-	sprite_index = sPlayerRunL;
+	if(hsp<-4){
+		sprite_index = sPlayerDash;
+		image_index = 1;
+	}
+	else{
+		sprite_index = sPlayerRunL;
+	}
+	
 }
 	
 if(move>0){
-	sprite_index = sPlayerRunR;
+	if(hsp>4){
+		sprite_index = sPlayerDash;
+		image_index = 2;
+	}
+	else{
+		sprite_index = sPlayerRunR;
+	}
+	
 }
+//show_debug_message(hsp);
 
 if(move=0){
 	if(faceDirection<0){
@@ -43,6 +58,7 @@ if (key_dash) {
 	hsp += move * dash;
 	key_left = 0;
 	key_right = 0;
+	//sprite_index = sPlayerDash;
 }
 
 //Momentum Calculation
