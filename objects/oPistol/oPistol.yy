@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sEnemy2",
-    "path": "sprites/sEnemy2/sEnemy2.yy",
+    "name": "sPistol",
+    "path": "sprites/sPistol/sPistol.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,7 +20,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -28,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEnemy1",
+  "name": "oPistol",
   "tags": [],
   "resourceType": "GMObject",
 }
