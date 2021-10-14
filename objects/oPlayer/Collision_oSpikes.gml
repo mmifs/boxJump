@@ -1,0 +1,3 @@
+killPlayer();
+
+//instance_destroy();

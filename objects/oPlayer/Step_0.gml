@@ -5,7 +5,7 @@ key_jump = keyboard_check_pressed(vk_space);
 key_dash = keyboard_check_pressed(vk_up);
 
 //Functions
-function respawn() {
+function respawn() {	//Respawn player on death
 	instance_create_layer(oRoomCon.xPlayerOrigin,oRoomCon.yPlayerOrigin,Room1,oPlayer);
 }
 function killPlayer() {
@@ -17,7 +17,7 @@ function killPlayer() {
 //Calculate Movement
 var move = key_right - key_left;
 if (move<0){
-	if(hsp<-4){
+	if(hsp<-4){						//Changing to appropriate sprite
 		sprite_index = sPlayerDash;
 		image_index = 1;
 	}
@@ -28,7 +28,7 @@ if (move<0){
 }
 	
 if(move>0){
-	if(hsp>4){
+	if(hsp>4){						//Changing to appropriate sprite
 		sprite_index = sPlayerDash;
 		image_index = 2;
 	}
@@ -37,14 +37,13 @@ if(move>0){
 	}
 	
 }
-//show_debug_message(hsp);
 
 if(move=0){
-	if(faceDirection<0){
+	if(faceDirection<0){			//Changing to appropriate sprite
 		sprite_index=sPlayerIdle
 		image_index=1;
 	}
-	if(faceDirection>0){
+	if(faceDirection>0){			//Changing to appropriate sprite
 		sprite_index=sPlayerIdle
 		image_index=2;
 	}
@@ -58,7 +57,6 @@ if (key_dash) {
 	hsp += move * dash;
 	key_left = 0;
 	key_right = 0;
-	//sprite_index = sPlayerDash;
 }
 
 //Momentum Calculation
@@ -87,8 +85,7 @@ if (place_meeting(x,y+1,oWall)) {
 	inAir = 0;	
 }
 
-if (place_meeting(x,y+1,oWall)) && (key_jump)
-{
+if (place_meeting(x,y+1,oWall)) && (key_jump){
 	audio_play_sound(sFloorJump,1000,false)
 	vsp += jump_height;
 }
@@ -100,10 +97,6 @@ if (!place_meeting(x,y+1,oWall)) && (key_jump) {
 		vsp += jump_height;	
 		jump_count ++;
 	}
-}
-
-if (!place_meeting(x,y+1,oWall)) {
-	inAir = 1;
 }
 
 // Horizontal Collision
@@ -128,7 +121,8 @@ if (place_meeting(x,y+vsp,oWall))
 }
 y = y + vsp;
 
-// Destroy self on enemy contact
+
+// Destroy self on enemy contact; can use collision event instead, killPlayer function still works
 if (place_meeting(x+hsp,y,oEnemy1)) 
 {
 	while (!place_meeting(x+sign(hsp),y,oEnemy1))

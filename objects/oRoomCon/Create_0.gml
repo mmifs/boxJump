@@ -3,5 +3,5 @@ xPlayerOrigin = 160;
 yPlayerOrigin = 544;
 leftBorder = -100;
 bottomBorder = 700;
-rightBorder = 1400;
-topBorder = -300;
+rightBorder = 4000;
+topBorder = -1200;
