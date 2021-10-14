@@ -26,7 +26,7 @@ N/A
 
 ## License
 
-license error
+See license file
 
 
 ## Contributing

@@ -1,1 +1,1 @@
-audio_play_sound(sMusic1,1000,true)
+audio_play_sound(sMusic2,1000,true)
