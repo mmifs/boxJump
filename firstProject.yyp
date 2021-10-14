@@ -10,6 +10,7 @@
     {"id":{"name":"sDash","path":"sounds/sDash/sDash.yy",},"order":3,},
     {"id":{"name":"sFloorJump","path":"sounds/sFloorJump/sFloorJump.yy",},"order":1,},
     {"id":{"name":"sDeath","path":"sounds/sDeath/sDeath.yy",},"order":6,},
+    {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},"order":9,},
     {"id":{"name":"oPistol","path":"objects/oPistol/oPistol.yy",},"order":7,},
     {"id":{"name":"sDoubleJump","path":"sounds/sDoubleJump/sDoubleJump.yy",},"order":2,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":1,},
@@ -27,6 +28,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":3,},
     {"id":{"name":"sEnemy2","path":"sprites/sEnemy2/sEnemy2.yy",},"order":7,},
     {"id":{"name":"sSmallGun","path":"sounds/sSmallGun/sSmallGun.yy",},"order":5,},
+    {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":8,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
