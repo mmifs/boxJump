@@ -1,12 +1,13 @@
 //show_debug_message(hp);
 //Chase AI
 if (instance_exists(oPlayer)){
-	active = point_distance(x, y, oPlayer.x, oPlayer.y) <= 400 //calc distance to player
+	active = point_distance(x, y, oPlayer.x, oPlayer.y) <= 300 //calc distance to player
 	var move = sign(oPlayer.x-x) //calculate if player is left or right
 
 	if (active) //if player in range
 	{
-		if((oPlayer.x-x > -300 && oPlayer.x-x < 0) || (oPlayer.x-x > 0 && oPlayer.x-x < 300)){ //x distance check (redundant?)
+		active = point_distance(x, y, oPlayer.x, oPlayer.y) <= 400
+		if((oPlayer.x-x > -400 && oPlayer.x-x < 0) || (oPlayer.x-x > 0 && oPlayer.x-x < 400)){ //x distance chase
 			walk = walk_sp*(hspeed >= -3 && hspeed <= 3); //calc speed*direction
 			hspeed += move*walk; //move towards player
 		}
@@ -21,8 +22,6 @@ if (hspeed > 0) {
 	hspeed -= mom;
 } else if (hspeed < 0) {
 	hspeed += mom;
-} else {
-	hspeed = 0;
 }
 
 //Gravity Calc

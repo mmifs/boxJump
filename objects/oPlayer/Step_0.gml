@@ -51,12 +51,12 @@ if(move=0){
 	
 //Dash Movement
 if (key_dash) {
-	if (hsp >= -4 && hsp <= 4 && move != 0) {
-		audio_play_sound(sDash,1000,false)
+	if (instance_exists(oPlayer)){
+		if (hsp >= -4 && hsp <= 4 && move != 0) {
+			audio_play_sound(sDash,1000,false)
+		}
+		hsp += move * dash;
 	}
-	hsp += move * dash;
-	key_left = 0;
-	key_right = 0;
 }
 
 //Momentum Calculation

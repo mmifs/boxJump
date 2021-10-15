@@ -6,6 +6,9 @@ if ((instance_exists(oPlayer))) {
 	if (follow != noone) {
 		xTo = follow.x;
 		yTo = follow.y;
+		if (yTo > 350){
+			yTo = 350;
+		}
 	}
 }
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
