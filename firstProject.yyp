@@ -1,6 +1,5 @@
 {
   "resources": [
-    {"id":{"name":"Sprite8","path":"sprites/Sprite8/Sprite8.yy",},"order":15,},
     {"id":{"name":"sFloorLand","path":"sounds/sFloorLand/sFloorLand.yy",},"order":4,},
     {"id":{"name":"oEnemy1","path":"objects/oEnemy1/oEnemy1.yy",},"order":3,},
     {"id":{"name":"oBang","path":"objects/oBang/oBang.yy",},"order":5,},
@@ -21,10 +20,10 @@
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"order":4,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"oRoomCon","path":"objects/oRoomCon/oRoomCon.yy",},"order":2,},
-    {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},"order":15,},
     {"id":{"name":"sBang","path":"sprites/sBang/sBang.yy",},"order":4,},
     {"id":{"name":"sEnemy1","path":"sprites/sEnemy1/sEnemy1.yy",},"order":2,},
     {"id":{"name":"sPlayerRunR","path":"sprites/sPlayerRunR/sPlayerRunR.yy",},"order":6,},
+    {"id":{"name":"sBoomerang","path":"sprites/sBoomerang/sBoomerang.yy",},"order":11,},
     {"id":{"name":"sPlayerRunL","path":"sprites/sPlayerRunL/sPlayerRunL.yy",},"order":5,},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},"order":0,},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":3,},
@@ -34,6 +33,7 @@
     {"id":{"name":"sQuarterFloor","path":"sprites/sQuarterFloor/sQuarterFloor.yy",},"order":10,},
     {"id":{"name":"oSpikes","path":"objects/oSpikes/oSpikes.yy",},"order":9,},
     {"id":{"name":"sSmallGun","path":"sounds/sSmallGun/sSmallGun.yy",},"order":5,},
+    {"id":{"name":"oBoomerang","path":"objects/oBoomerang/oBoomerang.yy",},"order":10,},
     {"id":{"name":"sPlayerDash","path":"sprites/sPlayerDash/sPlayerDash.yy",},"order":7,},
     {"id":{"name":"sEnemy2","path":"sprites/sEnemy2/sEnemy2.yy",},"order":7,},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":8,},

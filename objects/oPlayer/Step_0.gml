@@ -38,6 +38,10 @@ if(move>0){
 	
 }
 
+if(move != 0) {
+	faceDirection = move;
+}
+
 if(move=0){
 	if(faceDirection<0){			//Changing to appropriate sprite
 		sprite_index=sPlayerIdle
@@ -141,9 +145,4 @@ oPlayer.y > oRoomCon.bottomBorder ||
 oPlayer.y < oRoomCon.topBorder)) 
 {
 	killPlayer();
-}
-
-
-if(move != 0) {
-	faceDirection = move;
 }
