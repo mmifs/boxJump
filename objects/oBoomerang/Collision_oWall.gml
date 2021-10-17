@@ -1,8 +1,7 @@
 //Wall bounce mechanic
-if(bounceCount=1){
+if(bounceCount==1){
 	hspeed=hspeed*-1;
 	bounceCount=0;
-}
-else{    
+}else{    
 	instance_destroy(); 
 }						
