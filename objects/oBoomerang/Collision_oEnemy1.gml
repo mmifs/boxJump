@@ -1,3 +1,9 @@
-other.hp-=2;
+other.hp-=damage;
 instance_destroy();
-other.hspeed += sign(hspeed)*knockback
+
+//knockback
+if (x-other.x>0){
+	other.hspeed += knockback;
+}else if(x-other.x<0){
+	other.hspeed -= knockback;
+}
