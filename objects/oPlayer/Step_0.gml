@@ -20,8 +20,7 @@ if (move<0){
 	if(hsp<-4){						//Changing to appropriate sprite
 		sprite_index = sPlayerDash;
 		image_index = 1;
-	}
-	else{
+	}else{
 		sprite_index = sPlayerRunL;
 	}
 	
@@ -31,8 +30,7 @@ if(move>0){
 	if(hsp>4){						//Changing to appropriate sprite
 		sprite_index = sPlayerDash;
 		image_index = 2;
-	}
-	else{
+	}else{
 		sprite_index = sPlayerRunR;
 	}
 	
@@ -42,7 +40,7 @@ if(move != 0) {
 	faceDirection = move;
 }
 
-if(move=0){
+if(move==0){
 	if(faceDirection<0){			//Changing to appropriate sprite
 		sprite_index=sPlayerIdle
 		image_index=1;
@@ -68,13 +66,11 @@ if (hsp > 0) {
 	hsp -= mom;
 } else if (hsp < 0) {
 	hsp += mom;
-} else {
-	hsp = 0;
 }
 
 //Speed limit
-walk = walk_sp*(hsp >= -3 && hsp <= 3);
-dash = dash_sp*(hsp >= -4 && hsp <= 4); 
+walk = walk_sp*(hsp >= -walk_limit && hsp <= walk_limit);
+dash = dash_sp*(hsp >= -dash_limit && hsp <= dash_limit); 
 hsp += move * walk;
 
 //Gravity Calc
@@ -82,8 +78,8 @@ vsp = vsp + grv;
 
 //Jump Logic
 if (place_meeting(x,y+1,oWall)) {
-	if (inAir = 1) {
-	audio_play_sound(sFloorLand,1000,false)
+	if (inAir == 1) {
+		audio_play_sound(sFloorLand,1000,false)
 	}
 	jump_count = 0;
 	inAir = 0;	

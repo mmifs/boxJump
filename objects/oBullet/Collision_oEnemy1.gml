@@ -1,4 +1,4 @@
 //instance_destroy(other);
 //instance_destroy();
-other.hp--;
+other.hp-=damage;
 instance_destroy();

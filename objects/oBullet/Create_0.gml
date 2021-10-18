@@ -14,3 +14,5 @@ if(keyboard_check(vk_up)){
 else{
 	hspeed = 20*oPlayer.faceDirection;
 }
+hspeed = 20*oPlayer.faceDirection;
+damage = 1;
