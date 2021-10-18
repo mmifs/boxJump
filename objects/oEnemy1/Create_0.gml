@@ -9,3 +9,4 @@ inAir = 0;
 dash_sp = 10;
 walk_sp = 1;
 faceDirection = 1;
+walk_limit = 3;

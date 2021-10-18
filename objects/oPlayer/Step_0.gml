@@ -69,8 +69,8 @@ if (hsp > 0) {
 }
 
 //Speed limit
-walk = walk_sp*(hsp >= -3 && hsp <= 3);
-dash = dash_sp*(hsp >= -4 && hsp <= 4); 
+walk = walk_sp*(hsp >= -walk_limit && hsp <= walk_limit);
+dash = dash_sp*(hsp >= -dash_limit && hsp <= dash_limit); 
 hsp += move * walk;
 
 //Gravity Calc
