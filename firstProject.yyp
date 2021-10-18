@@ -34,6 +34,8 @@
     {"id":{"name":"oSpikes","path":"objects/oSpikes/oSpikes.yy",},"order":9,},
     {"id":{"name":"sSmallGun","path":"sounds/sSmallGun/sSmallGun.yy",},"order":5,},
     {"id":{"name":"oBoomerang","path":"objects/oBoomerang/oBoomerang.yy",},"order":10,},
+    {"id":{"name":"sGrapple","path":"sprites/sGrapple/sGrapple.yy",},"order":12,},
+    {"id":{"name":"oGrapple","path":"objects/oGrapple/oGrapple.yy",},"order":11,},
     {"id":{"name":"sPlayerDash","path":"sprites/sPlayerDash/sPlayerDash.yy",},"order":7,},
     {"id":{"name":"sEnemy2","path":"sprites/sEnemy2/sEnemy2.yy",},"order":7,},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":8,},
