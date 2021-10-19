@@ -1,3 +1,12 @@
+//aim
+vspeed = -20;
+if(keyboard_check(vk_up)){
+	hspeed = 0;
+}else{
+	hspeed = 20*oPlayer.faceDirection;
+}
+
+
 //Pseudocode
 
 /*

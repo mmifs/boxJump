@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"sGrappleRope","path":"sprites/sGrappleRope/sGrappleRope.yy",},"order":13,},
     {"id":{"name":"sFloorLand","path":"sounds/sFloorLand/sFloorLand.yy",},"order":4,},
     {"id":{"name":"oEnemy1","path":"objects/oEnemy1/oEnemy1.yy",},"order":3,},
     {"id":{"name":"oBang","path":"objects/oBang/oBang.yy",},"order":5,},
@@ -35,7 +36,7 @@
     {"id":{"name":"sSmallGun","path":"sounds/sSmallGun/sSmallGun.yy",},"order":5,},
     {"id":{"name":"oBoomerang","path":"objects/oBoomerang/oBoomerang.yy",},"order":10,},
     {"id":{"name":"sGrapple","path":"sprites/sGrapple/sGrapple.yy",},"order":12,},
-    {"id":{"name":"oGrapple","path":"objects/oGrapple/oGrapple.yy",},"order":11,},
+    {"id":{"name":"oGrappleHook","path":"objects/oGrappleHook/oGrappleHook.yy",},"order":11,},
     {"id":{"name":"sPlayerDash","path":"sprites/sPlayerDash/sPlayerDash.yy",},"order":7,},
     {"id":{"name":"sEnemy2","path":"sprites/sEnemy2/sEnemy2.yy",},"order":7,},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":8,},
