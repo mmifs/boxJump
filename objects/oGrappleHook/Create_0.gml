@@ -1,36 +1,39 @@
-//aim
-vspeed = -20;
+//swingMom = 3; //swing accel ?
+
+//aim either diagonal or straight up
+vspeed = -10;
 if(keyboard_check(vk_up)){
 	hspeed = 0;
 }else{
-	hspeed = 20*oPlayer.faceDirection;
+	hspeed = 10*oPlayer.faceDirection;
 }
+
 
 
 //Pseudocode
 
 /*
 GRAPPLE OBJECT CODE
-//CREATE EVENT//
+//CREATE EVENT// **DONE**
 set VSPEED upwards
 set HSPEED in player direction
 
-//COLLISION WITH TERRAIN EVENT//
+//COLLISION WITH TERRAIN EVENT// **DONE**
 set VSPEED to 0
 set HSPEED to 0
 
-//STEP EVENT//
+//STEP EVENT// **DONE**
 if grapple hook gets too far from player
 	destroy grapple hook
+
+PLAYER OBJECT CODE
+//KEY PRESS C EVENT// **DONE**
+create grapple hook
 
 */
 
 /*
-PLAYER OBJECT CODE
-//KEY PRESS C EVENT//
-create grapple hook
-
-//STEP EVENT//
+//STEP EVENT// PARTIALLY DONE, SEE STEP EVENT**
 if grapple hook touches wall object
 	if player is in the air
 		player swings in character's current dirrection
