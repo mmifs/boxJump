@@ -3,5 +3,8 @@ xPlayerOrigin = 160;
 yPlayerOrigin = 544;
 leftBorder = -100;
 bottomBorder = 700;
-rightBorder = 4000;
+rightBorder = 4850;
 topBorder = -1200;
+
+global.room_id = layer_create(0);
+show_debug_message(global.room_id);
