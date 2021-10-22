@@ -6,14 +6,13 @@ key_dash = keyboard_check_pressed(vk_shift);
 
 //Functions
 function respawn() {	//Respawn player on death
-	instance_create_layer(oRoomCon.xPlayerOrigin,oRoomCon.yPlayerOrigin,Room1,oPlayer);
+	instance_create_layer(oRoomCon.xPlayerOrigin,oRoomCon.yPlayerOrigin,global.room_id,oPlayer);
 }
 function killPlayer() {
 	audio_play_sound(sDeath,1000,false)
 	instance_destroy(oPlayer)
 	respawn();
 }
-
 //Calculate Movement
 var move = key_right - key_left;
 if (move<0){
@@ -142,3 +141,5 @@ oPlayer.y < oRoomCon.topBorder))
 {
 	killPlayer();
 }
+
+//show_debug_message(layer_get_id(rFirstLevel));
