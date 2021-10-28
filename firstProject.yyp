@@ -23,6 +23,7 @@
     {"id":{"name":"oRoomCon","path":"objects/oRoomCon/oRoomCon.yy",},"order":2,},
     {"id":{"name":"sBang","path":"sprites/sBang/sBang.yy",},"order":4,},
     {"id":{"name":"sEnemy1","path":"sprites/sEnemy1/sEnemy1.yy",},"order":2,},
+    {"id":{"name":"oScrollingCam","path":"objects/oScrollingCam/oScrollingCam.yy",},"order":12,},
     {"id":{"name":"sPlayerRunR","path":"sprites/sPlayerRunR/sPlayerRunR.yy",},"order":6,},
     {"id":{"name":"sBoomerang","path":"sprites/sBoomerang/sBoomerang.yy",},"order":11,},
     {"id":{"name":"sPlayerRunL","path":"sprites/sPlayerRunL/sPlayerRunL.yy",},"order":5,},

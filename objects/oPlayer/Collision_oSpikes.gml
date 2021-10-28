@@ -1,1 +1,3 @@
-killPlayer();
+with(oScrollingCam){
+	killPlayer();
+}
