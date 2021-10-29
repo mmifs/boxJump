@@ -1,5 +1,4 @@
 //x += (xTo - x)/1300;
-//leftBorder = camera_get_view_x();
 
 //Camera moves left while player is alive
 if(global.pDead == 0){

@@ -138,15 +138,14 @@ oPlayer.y < oRoomCon.topBorder))
 	}
 }
 
-//Camera border instakill------------------------------------WIP
-/*if (/*(instance_exists(oPlayer)) && (
-oPlayer.x < camera_get_view_x(oScrollingCam.camera) || 
-oPlayer.x > camera_get_view_x(oScrollingCam.camera) + camera_get_view_width(oScrollingCam.camera) || 
-oPlayer.y > camera_get_view_y(oScrollingCam.camera) + camera_get_view_height(oScrollingCam.camera) || 
-oPlayer.y < camera_get_view_y(oScrollingCam.camera)))
+//Camera border instakill
+if ((instance_exists(oPlayer)) && (
+oPlayer.x < (oScrollingCam.x - 640) || 
+oPlayer.x > (oScrollingCam.x + 640) || 
+oPlayer.y < (oScrollingCam.y - 360) || 
+oPlayer.y > (oScrollingCam.y + 360)))
 {
-	show_debug_message("it works");
-	/*with(oScrollingCam){
+	with(oScrollingCam){
 		killPlayer();
 	}
-}*/
+}
