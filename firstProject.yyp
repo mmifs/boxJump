@@ -9,6 +9,7 @@
     {"id":{"name":"oMusic","path":"objects/oMusic/oMusic.yy",},"order":6,},
     {"id":{"name":"sDash","path":"sounds/sDash/sDash.yy",},"order":3,},
     {"id":{"name":"sSpikes","path":"sprites/sSpikes/sSpikes.yy",},"order":9,},
+    {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},"order":14,},
     {"id":{"name":"sFloorJump","path":"sounds/sFloorJump/sFloorJump.yy",},"order":1,},
     {"id":{"name":"sDeath","path":"sounds/sDeath/sDeath.yy",},"order":6,},
     {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},"order":9,},

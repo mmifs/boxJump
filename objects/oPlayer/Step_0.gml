@@ -12,7 +12,13 @@ if (move<0){
 		sprite_index = sPlayerDash;
 		image_index = 1;
 	}else{
+		if(inAir==1){
+			sprite_index = sPlayerJump;
+			image_index = 1;
+		}
+		else{
 		sprite_index = sPlayerRunL;
+		}
 	}
 	
 }
@@ -22,7 +28,13 @@ if(move>0){
 		sprite_index = sPlayerDash;
 		image_index = 2;
 	}else{
+		if(inAir==1){
+			sprite_index = sPlayerJump;
+			image_index = 2;
+		}
+		else{
 		sprite_index = sPlayerRunR;
+		}
 	}
 	
 }
@@ -33,12 +45,16 @@ if(move != 0) {
 
 if(move==0){
 	if(faceDirection<0){			//Changing to appropriate sprite
+		if(inAir==0){
 		sprite_index=sPlayerIdle
 		image_index=1;
+		}
 	}
 	if(faceDirection>0){			//Changing to appropriate sprite
+		if(inAir==0){
 		sprite_index=sPlayerIdle
 		image_index=2;
+		}
 	}
 }
 	
@@ -79,6 +95,7 @@ if (place_meeting(x,y+1,oWall)) {
 if (place_meeting(x,y+1,oWall)) && (key_jump){
 	audio_play_sound(sFloorJump,1000,false)
 	vsp += jump_height;
+	inAir = 1;
 }
 
 if (!place_meeting(x,y+1,oWall)) && (key_jump) {
