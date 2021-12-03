@@ -1,5 +1,5 @@
 //swingMom = 3; //swing accel ?
-
+grapDist = 0;
 //aim either diagonal or straight up
 vspeed = -10;
 if(keyboard_check(vk_up)){

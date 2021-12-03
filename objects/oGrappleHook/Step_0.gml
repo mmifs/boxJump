@@ -1,25 +1,44 @@
 //destroy@range
-if(x>=oPlayer.x+700||x<=oPlayer.x-700||y>=oPlayer.y+500||y<=oPlayer.y-500){
-	instance_destroy();
+if(instance_exists(oPlayer)){
+	if(
+	x>=oPlayer.x+700||
+	x<=oPlayer.x-700||
+	y>=oPlayer.y+500||
+	y<=oPlayer.y-500||
+	!instance_exists(oPlayer)) {
+		instance_destroy();
+		oPlayer.grapple = false;
+	}
+
+
+//((currentDist^2)/2) > ((oGrappleHook.grapDist^2)/2)
+//((oGrappleHook.grapDist^2)/2)) > ((currentDist^2)/2
+//if not touch
+if (!place_meeting(x,y+vspeed,oWall)){
+	grapDist = ((x - oPlayer.x)^2+(y - oPlayer.y)^2)/2;
 }
 
 //predict collision
-x = x+hspeed;
-y = y+vspeed;
+	x = x+hspeed;
+	y = y+vspeed;
 
 
-//terrain collision
-if (place_meeting(x,y+vspeed,oWall)||
-place_meeting(x+hspeed,y,oWall)||
-place_meeting(x,y+vspeed,oFloor)||
-place_meeting(x+hspeed,y,oFloor)||
-place_meeting(x,y+vspeed,oQuarterFloor)||
-place_meeting(x+hspeed,y,oQuarterFloor)) {
-	if (oPlayer.inAir==1){
-		//player swings
+	//terrain collision
+	if (place_meeting(x,y+vspeed,oWall)||
+	place_meeting(x+hspeed,y,oWall)||
+	place_meeting(x,y+vspeed,oFloor)||
+	place_meeting(x+hspeed,y,oFloor)||
+	place_meeting(x,y+vspeed,oQuarterFloor)||
+	place_meeting(x+hspeed,y,oQuarterFloor)) {
+		if (oPlayer.inAir==true && oPlayer.grapple==true){
+			//player swings
+		}
 	}
+} else {
+	instance_destroy(oGrappleHook);
 }
 
+//show_debug_message(grapDist);
 /*
 //STEP EVENT//
 if grapple hook touches wall object

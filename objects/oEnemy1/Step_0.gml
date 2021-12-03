@@ -1,6 +1,6 @@
 //show_debug_message(hp);
 //Chase AI
-if (instance_exists(oPlayer)){
+/*if (instance_exists(oPlayer)){
 	active = point_distance(x, y, oPlayer.x, oPlayer.y) <= 300 //calc distance to player
 	var move = sign(oPlayer.x-x) //calculate if player is left or right
 
@@ -15,7 +15,7 @@ if (instance_exists(oPlayer)){
 			vspeed += jump_height; //jump
 		}
 	}
-}
+}*/
 
 //Momentum calc
 if (hspeed > 0) {

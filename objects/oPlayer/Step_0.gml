@@ -156,7 +156,7 @@ oPlayer.y < oRoomCon.topBorder))
 }
 
 //Camera border instakill
-if ((instance_exists(oPlayer)) && (
+/*if ((instance_exists(oPlayer)) && (
 oPlayer.x < (oScrollingCam.x - 640) || 
 oPlayer.x > (oScrollingCam.x + 640) || 
 oPlayer.y < (oScrollingCam.y - 360) || 
@@ -165,4 +165,32 @@ oPlayer.y > (oScrollingCam.y + 360)))
 	with(oScrollingCam){
 		killPlayer();
 	}
+}*/
+
+/*if (grapple == true && instance_exists(oPlayer) && instance_exists(oGrappleHook)) {
+	mom=0;
+	
+	currentDist = ((oGrappleHook.x - x)^2+(oGrappleHook.y -y)^2)/2;
+	show_debug_message(sqrt(power((currentDist), 2)));
+	show_debug_message(sqrt(power((oGrappleHook.grapDist), 2)));
+	
+	if (sqrt(power((currentDist), 2)) > sqrt(power((oGrappleHook.grapDist), 2))){
+		hsp=0;
+		vsp=0;
+		grv=0;
+	} else if (grapple == false){
+		vsp = 0;
+		hsp = 0;
+		grv = 0.3;
+		mom = 0.5;
+	} else if (!instance_exists(oGrappleHook)){
+		vsp = 0;
+		hsp = 0;
+		grv = 0.3;
+		mom = 0.5;		
+	}
+}*/
+
+if (grapple == true && instance_exists(oPlayer) && instance_exists(oGrappleHook)) {
+	
 }
