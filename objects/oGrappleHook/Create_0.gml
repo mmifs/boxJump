@@ -1,5 +1,10 @@
 //swingMom = 3; //swing accel ?
-grapDist = 0;
+if(oPlayer.x < x){
+	swingD=1;
+}else if(oPlayer.x>x){
+	swingD= -1;
+}
+xInd = 0; //indicate if player is left or right of ghook
 //aim either diagonal or straight up
 vspeed = -10;
 if(keyboard_check(vk_up)){

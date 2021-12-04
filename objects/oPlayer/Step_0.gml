@@ -4,6 +4,29 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
 key_dash = keyboard_check_pressed(vk_shift);
 
+if (inAir && !grapple){
+	mom=0.1;
+} else if (!inAir && !grapple) {
+	mom=0.5;
+}
+
+function resetPlayer() {
+vsp = 0;
+hsp = 0;
+grv = 0.3;
+mom = 0.5;
+vMom = 0;
+jump_height = -10;
+jump_count = 0;
+inAir = false;
+dash_sp = 10;
+walk_sp = 1;
+faceDirection = 1;
+walk_limit = 3;
+dash_limit = 4;
+grapple = false;
+};
+
 
 //Calculate Movement
 var move = key_right - key_left;
@@ -75,11 +98,12 @@ if (hsp > 0) {
 	hsp += mom;
 }
 
-//Speed limit
+//Speed limit & Movement Calc
 walk = walk_sp*(hsp >= -walk_limit && hsp <= walk_limit);
 dash = dash_sp*(hsp >= -dash_limit && hsp <= dash_limit); 
-hsp += move * walk;
-
+if (grapple == false){
+	hsp += move * walk;
+}
 //Gravity Calc
 vsp = vsp + grv;
 
@@ -166,31 +190,29 @@ oPlayer.y > (oScrollingCam.y + 360)))
 		killPlayer();
 	}
 }*/
-
-/*if (grapple == true && instance_exists(oPlayer) && instance_exists(oGrappleHook)) {
-	mom=0;
-	
-	currentDist = ((oGrappleHook.x - x)^2+(oGrappleHook.y -y)^2)/2;
-	show_debug_message(sqrt(power((currentDist), 2)));
-	show_debug_message(sqrt(power((oGrappleHook.grapDist), 2)));
-	
-	if (sqrt(power((currentDist), 2)) > sqrt(power((oGrappleHook.grapDist), 2))){
-		hsp=0;
-		vsp=0;
-		grv=0;
-	} else if (grapple == false){
-		vsp = 0;
-		hsp = 0;
-		grv = 0.3;
-		mom = 0.5;
-	} else if (!instance_exists(oGrappleHook)){
-		vsp = 0;
-		hsp = 0;
-		grv = 0.3;
-		mom = 0.5;		
-	}
-}*/
-
 if (grapple == true && instance_exists(oPlayer) && instance_exists(oGrappleHook)) {
-	
+
+	//currentDist = sqrt(power((oGrappleHook.x-x), 2)+power((oGrappleHook.y-y), 2));
+	//show_debug_message(currentDist);
+	//show_debug_message(oGrappleHook.grapDist);
+	//grv -= (0.01*faceDirection);
+	//Chase AI
+	//active = point_distance(x, y, oPlayer.x, oPlayer.y) <= 300 //calc distance to player
+	mom=0;
+	//hMove = sign(oGrappleHook.x-x) //calculate if player is left or right
+	vMove = sign(oGrappleHook.y-y)
+
+	if (hsp < 10 && vsp > -5)
+	{
+		//x distance chase
+			//walk = oGrappleHook.swingD*(hsp >= -walk_limit && hsp <= walk_limit);
+			hsp += 2*sign(hsp);//calc speed*direction
+			//hsp += hMove*(oGrappleHook.swingD*0.4); //move towards player
+			if(oGrappleHook.swingD==sign(hsp)){
+				grv += vMove*2;
+				show_debug_message("swingD is " + string(oGrappleHook.swingD));
+				}
+	} else {
+		grv = 0.3;
+	}
 }

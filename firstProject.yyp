@@ -30,6 +30,7 @@
     {"id":{"name":"sPlayerRunL","path":"sprites/sPlayerRunL/sPlayerRunL.yy",},"order":5,},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},"order":0,},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":3,},
+    {"id":{"name":"oGrap","path":"objects/oGrap/oGrap.yy",},"order":13,},
     {"id":{"name":"Room12","path":"rooms/Room12/Room12.yy",},"order":1,},
     {"id":{"name":"sPistol","path":"sprites/sPistol/sPistol.yy",},"order":8,},
     {"id":{"name":"sMusic1","path":"sounds/sMusic1/sMusic1.yy",},"order":0,},
