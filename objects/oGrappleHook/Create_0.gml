@@ -13,7 +13,7 @@ if(keyboard_check(vk_up)){
 	hspeed = 10*oPlayer.faceDirection;
 }
 
-
+oPlayer.hSwing = sign(oGrappleHook.x - x) + oPlayer.faceDirection
 
 //Pseudocode
 

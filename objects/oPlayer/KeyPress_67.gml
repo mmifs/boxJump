@@ -7,3 +7,8 @@ if(!instance_exists(oGrappleHook)){
 	instance_destroy(oGrappleHook);
 	grv=0.3;
 }
+show_debug_message(x);
+show_debug_message(oGrappleHook.x);
+
+show_debug_message(sign(oGrappleHook.x - x));
+show_debug_message(hSwing);

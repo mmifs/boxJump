@@ -13,3 +13,6 @@ walk_limit = 3;
 dash_limit = 4;
 grapple = false;
 swingMom = 0.5;
+vDir = 0.5;
+functionCall = 0;
+num = 0;

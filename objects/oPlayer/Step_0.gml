@@ -190,24 +190,40 @@ oPlayer.y > (oScrollingCam.y + 360)))
 		killPlayer();
 	}
 }*/
+
+//Grapple hook mechanic
 if (grapple == true && instance_exists(oPlayer) && instance_exists(oGrappleHook)) {
 
-	//currentDist = sqrt(power((oGrappleHook.x-x), 2)+power((oGrappleHook.y-y), 2));
-	//show_debug_message(currentDist);
-	//show_debug_message(oGrappleHook.grapDist);
-	//grv -= (0.01*faceDirection);
-	//Chase AI
-	//active = point_distance(x, y, oPlayer.x, oPlayer.y) <= 300 //calc distance to player
-	mom=0;
-	//hMove = sign(oGrappleHook.x-x) //calculate if player is left or right
-	vMove = sign(oGrappleHook.y-y)
-
+	grv = 0;
+	vMom = 0;
+	mom = 0;
+	//vMove = sign(oGrappleHook.y-y);
+	hspeed += 0.5*sign(oGrappleHook.x - x); //sets left and right movement in the swing
+	//vspeed += 1*sign(oGrappleHook.x - x);
+	vspeed += vDir;
+	if(sign(oGrappleHook.x - x) != hSwing && functionCall == 0/*x == oGrappleHook.x /*y >= oGrappleHook.y - 50*/){
+		num = x;
+		//vspeed = vspeed*-1;
+		functionCall = 1;
+	}
+	if(x == num){
+		vspeed = vspeed*-1;
+	}
+	if(hspeed == 0){
+		vspeed = vspeed*-1;
+	}/*
+	if(x = broski){
+		vspeed = vspeed*-1;
+	}*/
+	hSwing = sign(oGrappleHook.x - x);
+	//show_debug_message(x);
+	//show_debug_message(oGrappleHook.x);
+	show_debug_message(hspeed);
+	//show_debug_message(swingX);
+/*
 	if (hsp < 10 && vsp > -5)
 	{
-		//x distance chase
-			//walk = oGrappleHook.swingD*(hsp >= -walk_limit && hsp <= walk_limit);
 			hsp += 2*sign(hsp);//calc speed*direction
-			//hsp += hMove*(oGrappleHook.swingD*0.4); //move towards player
 			if(oGrappleHook.swingD==sign(hsp)){
 				grv += vMove*2;
 				show_debug_message("swingD is " + string(oGrappleHook.swingD));
@@ -215,4 +231,9 @@ if (grapple == true && instance_exists(oPlayer) && instance_exists(oGrappleHook)
 	} else {
 		grv = 0.3;
 	}
-}
+*/
+}/*
+function broski(horiP){
+	static myX = horiP;
+	return myX;
+}*/
